@@ -1,20 +1,20 @@
 {
   "name": "aic-inventory-app",
-    "homepage": "https://SamiSahil.github.io/aicinventory",
+  "homepage": "https://SamiSahil.github.io/aicinventory",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-     "predeploy": "npm run build", 
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
     "@react-oauth/google": "^0.12.1",
-    "apexcharts": "^3.49.1",
+    "apexcharts": "^5.3.4",
     "flatpickr": "^4.6.13",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.1",
