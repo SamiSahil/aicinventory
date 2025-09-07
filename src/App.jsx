@@ -13,6 +13,9 @@ import Purchases from './pages/Purchases/Purchases';
 import Sales from './pages/Sales/Sales';
 import Receipts from './pages/Receipts/Receipts';
 import Payments from './pages/Payments/Payments';
+import Reports from './pages/Reports/Reports';
+import Users from './pages/Users/Users';
+import Settings from './pages/Settings/Settings';
 
 // A wrapper for routes that require authentication
 function ProtectedRoute({ children }) {
@@ -43,7 +46,9 @@ function App() {
               <Route path="/sales" element={<ProtectedRoute><Sales /></ProtectedRoute>} />
               <Route path="/receipts" element={<ProtectedRoute><Receipts /></ProtectedRoute>} />
               <Route path="/payments" element={<ProtectedRoute><Payments /></ProtectedRoute>} />
-              {/* Add routes for other pages here */}
+              <Route path="/reports" element={<ProtectedRoute><Reports /></ProtectedRoute>} />
+              <Route path="/users" element={<ProtectedRoute><Users /></ProtectedRoute>} />
+              <Route path="/settings" element={<ProtectedRoute><Settings /></ProtectedRoute>} />
               <Route path="*" element={<Navigate to="/dashboard" />} />
             </Routes>
           </Layout>
