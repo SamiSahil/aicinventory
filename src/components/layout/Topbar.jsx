@@ -1,12 +1,18 @@
+// src/components/layout/Topbar.jsx
+
 import React from 'react';
 import { useAuth } from '../../context/AuthContext';
 import './Topbar.css';
 
-const Topbar = () => {
+const Topbar = ({ onMenuClick }) => {
     const { profile } = useAuth();
 
     return (
         <div className="top-bar">
+            <button className="menu-toggle" onClick={onMenuClick}>
+                <i className="fas fa-bars"></i>
+            </button>
+            
             <div className="top-bar-links">
                 <a href="#"><i className="fas fa-bell"></i></a>
                 <a href="#"><i className="fas fa-cog"></i></a>

@@ -14,14 +14,13 @@ export const AuthProvider = ({ children }) => {
             fetchProfile(tokenResponse.access_token);
         },
         onError: (error) => console.error('Login Failed:', error),
-        scope: 'https://www.googleapis.com/auth/spreadsheets', // Full scope for read/write
+        scope: 'https://www.googleapis.com/auth/spreadsheets', 
     });
 
     const logout = () => {
         setToken(null);
         setProfile(null);
         sessionStorage.removeItem('google-token');
-        // Add Google logout logic if necessary
     };
     
     const fetchProfile = async (accessToken) => {
@@ -43,7 +42,6 @@ export const AuthProvider = ({ children }) => {
             fetchProfile(token);
         }
     }, [token]);
-
 
     const value = { token, profile, login, logout };
 

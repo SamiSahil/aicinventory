@@ -53,3 +53,26 @@
     font-weight: 500;
     color: #34495e;
 }
+
+/* --- ADD THE FOLLOWING NEW STYLES --- */
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #34495e;
+    cursor: pointer;
+    padding: 0 10px;
+}
+
+.top-bar {
+  /* This ensures the toggle is on the left and links are on the right */
+  justify-content: space-between; 
+}
+
+@media (max-width: 480px) {
+    .menu-toggle {
+        display: block; /* Show the button on mobile */
+    }
+}
